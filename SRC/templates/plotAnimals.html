@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Embed Demo</title>
+    {{ data.js_resources|indent(4)|safe }}
+    {{ data.css_resources|indent(4)|safe }}
+    {{ data.plot_script|indent(4)|safe }}
+  </head>
+  <body>
+    <div>
+        {{ data.plot_div|indent(4)|safe }}
+    </div>
+    
+    <div>
+        <a class="btn btn-secondary" href="{{url_for('home')}}"> home </a>
+    </div>
+    
+  </body>
+</html>
