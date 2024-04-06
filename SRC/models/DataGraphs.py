@@ -2,9 +2,11 @@ import pandas as pd
 import numpy as np
 from models.Histograms_QQ import histogram_plot,Q_Q_Graphs
 
-from bokeh.io import output_notebook,show,output_file
+
 from bokeh.plotting import figure
 from bokeh.embed import file_html,components
+from bokeh.io import curdoc
+from bokeh.themes import Theme
 
 from bokeh.resources import CDN,INLINE
 from bokeh.layouts import layout
@@ -49,7 +51,8 @@ class DataGraphs():
             connect_db=db.connect
             QUERY_CONSULTA="""SELECT  animals_feature.idFeature,animals_feature.idAnimals,animals_feature.Weitgh,animals_feature.time_life,animals.NAME
                         FROM animals_feature
-                        INNER JOIN animals ON animals_feature.idAnimals=animals.idAnimals"""
+                        INNER JOIN animals ON animals_feature.idAnimals=animals.idAnimals
+                        WHERE animals_feature.idAnimals=1"""
             Data_frame=pd.read_sql_query(QUERY_CONSULTA,connect_db)
 
             #Clasificando los datos.

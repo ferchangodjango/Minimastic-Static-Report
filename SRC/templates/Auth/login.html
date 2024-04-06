@@ -10,7 +10,7 @@
 {% block body %}
 <main class="form-signin w-100 m-auto">
     <form class="form-signin" action="/login" method="POST">
-      <img class="mb-4" src="{{url_for('static',filename='img/Logo.png')}}" alt="" width="72" height="57">
+      <img class="mb-4" src="{{url_for('static',filename='img/user.svg')}}" alt="" width="250" height="100">
       {% with message=get_flashed_messages() %}
       {% if message %}
       <br />

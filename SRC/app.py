@@ -52,13 +52,9 @@ def logout():
 @app.route('/home')
 @login_required
 def home():
-    return render_template('/home.html')
+    return render_template('HomeMain.html')
 
-@app.route('/histograma')
-@login_required
-def histograma():
-    Histograma=DataGraphs.HistogramWeight(db)
-    return Histograma
+
 
 @app.route('/plot')
 @login_required

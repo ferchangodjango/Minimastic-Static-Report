@@ -1,0 +1,135 @@
+
+{% extends 'layout.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/home.css')}}">
+{% endblock %}
+
+{% block body %}
+<main>
+
+    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+         
+          <div class="container">
+            <img src="{{url_for('static',filename='img/dog.svg')}}" alt="" width="500" height="100">
+            <div class="carousel-caption text-start">
+              <h1>Welcome to the jungle.</h1>
+              <p class="opacity-75">This is a incredible experience for know the main feature of your pet.</p>
+              <p><a class="btn btn-lg btn-primary" href="{{url_for('logout')}}">Logout</a></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="carousel-item">
+          
+          <div class="container">
+            <img src="{{url_for('static',filename='img/cat.svg')}}" alt="" width="500" height="100">
+            <div class="carousel-caption text-end">
+              <h1>Cats</h1>
+              <p>Do you wanna be what is the feature of your favorite pets?</p>
+              <p><a class="btn btn-lg btn-primary" href="{{url_for('logout')}}">Logout</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  
+  
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+  
+    <div class="container marketing">
+  
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img  src="{{url_for('static', filename='img/statistic.svg')}}" alt="" width="300" height="200">
+
+          <h2 class="fw-normal">Project Description</h2>
+          <p>In this project you can view a dinamic report, about 3 poblation and 2 features of this poblation
+            You, cand view the weigth and height of a sample that ours scientist recover in Mexico City, you can view if this poblation
+            have a normal distribution, how is the histogram, and how is the confidence intervals, predictiv intervals, and tolerance intervals.
+            Enjoy this minimalistic Web Site
+          </p>
+          <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+  
+  
+      <!-- START THE FEATURETTES -->
+  
+      <hr class="featurette-divider">
+  
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">Cats <span class="text-body-secondary"></span></h2>
+          <p class="lead">The cats are very nice, its have many habilities, how jump and throw for tall places, and fall standing
+            is very important, the weigth of the cat, you can see the weigth and the height standar, of a big sample.  
+          </p>
+        </div>
+        <div class="col-md-5">
+
+          <img src="{{url_for('static',filename='img/cat.svg')}}" alt="" width="500" height="500">
+        </div>
+        <a class="btn btn-secondary" href="{{url_for('plot')}}"> Cat Plot</a>
+      </div>
+  
+      <hr class="featurette-divider">
+  
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1">Dogs. <span class="text-body-secondary"></span></h2>
+          <p class="lead">Maybe the best friend of the man, but you need to verify that you have a dog,
+            and not a wolf , of other kind of canine!
+          </p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src="{{url_for('static', filename='img/dog.svg')}}" alt="" width="400" height="400">
+        </div>
+      </div>
+  
+      <hr class="featurette-divider">
+  
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">Horse <span class="text-body-secondary"></span></h2>
+          <p class="lead">
+            Yea, all the boys want a horse in ours house, but is !!BIG¡¡ and very !!WEIGHT¡¡, check if you horse
+            have the standar height and weigth, maybe you have a pony!
+          </p>
+        </div>
+        <div class="col-md-5">
+          <img src="{{url_for('static',filename='img/horse.svg')}}" alt="" width="400" height="400">
+        </div>
+      </div>
+  
+      <hr class="featurette-divider">
+  
+      <!-- /END THE FEATURETTES -->
+  
+    </div><!-- /.container -->
+  
+  
+    <!-- FOOTER -->
+    <footer class="container">
+      <p class="float-end"><a href="#">Back to top</a></p>
+      <p>&copy; 2024-2025 Ferchango Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
+  </main>
+{% endblock %}
