@@ -56,12 +56,19 @@ def home():
 
 
 
-@app.route('/plot')
+#This is a prototipe view, for inprove the lay out.
+#This incluiding the next files
+#page.html
+#layout2.html
+#page.css
+@app.route('/Cats')
 @login_required
-def plot():
-    data=DataGraphs.HistogramJson(db)
+def Cats():
+    data=DataGraphs.HistogramJson(db,'CAT')
 
-    return render_template('AnimalsHered.html',data=data)
+    return render_template('page.html',data=data)
+
+
 
 
 if __name__=='__main__':
