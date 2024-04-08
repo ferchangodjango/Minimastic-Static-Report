@@ -19,6 +19,11 @@
 {{ data.plot_script2|indent(4)|safe }}
 
 
+{{ data.js_resources3|indent(4)|safe }}
+{{ data.css_resources3|indent(4)|safe }}
+{{ data.plot_script3|indent(4)|safe }}
+
+
 {% endblock %}
 
 
@@ -71,14 +76,18 @@
     <div class="col">
       <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('unsplash-photo-3.jpg');">
         <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-          <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h3>
+          <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Other thing that you need to know is the statics intervals</h3>
+          <p>
+            You can see 3 the statics.
+            <ul>
+              <p>The first is a tolerance interval, the superior limit is {{data.LST}} and the inferior limit is {{data.LIT}}, this is in PURPLE Color </p>
+              <p>The second is a prediction interval, the superior limit is {{data.LSP}} and the inferior limit is {{data.LIP}}, this is in GREEN Color </p>
+              <p>The third is a tolerance interval, the superior limit is {{data.LSC}} and the inferior limit is {{data.LIC}}, this is in BLUE Color </p>
+            </ul> 
+          </p>
           <ul class="d-flex list-unstyled mt-auto">
             <li class="me-auto">
-              <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-            </li>
-            <li class="d-flex align-items-center me-3">
-              <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
-              <small>California</small>
+              {{ data.plot_div3|indent(4)|safe }}
             </li>
             <li class="d-flex align-items-center">
               <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>

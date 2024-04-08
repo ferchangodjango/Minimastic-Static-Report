@@ -68,6 +68,21 @@ def Cats():
 
     return render_template('page.html',data=data)
 
+@app.route('/Dogs')
+@login_required
+def Dogs():
+    data=DataGraphs.HistogramJson(db,'DOG')
+
+    return render_template('page.html',data=data)
+
+
+@app.route('/Horses')
+@login_required
+def Horses():
+    data=DataGraphs.HistogramJson(db,'HORSE')
+
+    return render_template('page.html',data=data)
+
 
 
 
